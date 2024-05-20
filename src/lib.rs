@@ -9,6 +9,7 @@
 //! [image]: https://github.com/image-rs/image
 #![deny(missing_docs)]
 #![cfg_attr(test, feature(test))]
+#![cfg_attr(docsrs, feature(doc_cfg))]
 #![allow(
     clippy::cast_lossless,
     clippy::too_many_arguments,
@@ -51,6 +52,7 @@ pub mod haar;
 pub mod hog;
 pub mod hough;
 pub mod integral_image;
+pub mod kernel;
 pub mod local_binary_patterns;
 pub mod map;
 pub mod math;
@@ -59,6 +61,7 @@ pub mod noise;
 pub mod pixelops;
 pub mod point;
 #[cfg(any(feature = "property-testing", test))]
+#[cfg_attr(docsrs, doc(cfg(feature = "property-testing")))]
 pub mod property_testing;
 pub mod rect;
 pub mod region_labelling;
@@ -68,6 +71,7 @@ pub mod suppress;
 pub mod template_matching;
 pub mod union_find;
 #[cfg(feature = "display-window")]
+#[cfg_attr(docsrs, doc(cfg(feature = "display-window")))]
 pub mod window;
 
 pub use image;
